@@ -5,7 +5,7 @@ Summary:	Continuation-based web application framework
 Summary(pl):	Szkielet aplikacji WWW oparty na kontynuacji
 Name:		ruby-Borges
 Version:	1.1.0
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Languages
 Source0:	http://rubyforge.org/frs/download.php/574/borges-%{version}.tar.gz
