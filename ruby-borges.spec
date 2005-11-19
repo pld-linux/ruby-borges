@@ -1,6 +1,3 @@
-%define	ruby_archdir	%(ruby -r rbconfig -e 'print Config::CONFIG["archdir"]')
-%define	ruby_ridir	%(ruby -r rbconfig -e 'include Config; print File.join(CONFIG["datadir"], "ri", CONFIG["ruby_version"], "system")')
-%define ruby_rubylibdir %(ruby -r rbconfig -e 'print Config::CONFIG["rubylibdir"]')
 Summary:	Continuation-based web application framework
 Summary(pl):	Szkielet aplikacji WWW oparty na kontynuacji
 Name:		ruby-Borges
@@ -11,6 +8,7 @@ Group:		Development/Languages
 Source0:	http://rubyforge.org/frs/download.php/574/borges-%{version}.tar.gz
 # Source0-md5:	16b448d727a2647cf1dadfed22b5a02f
 URL:		http://borges.rubyforge.org/
+BuildRequires:	rpmbuild(macros) >= 1.263
 BuildRequires:	ruby
 BuildRequires:	ruby-devel
 Requires:	ruby
@@ -38,18 +36,16 @@ aplikacji WWW bez wchodzenia programistom w drogê.
 %prep
 %setup -q -n borges-%{version}
 
-%build
-
 find lib/ -name 'Test*' -type f -print0 | xargs -0 rm -v
 find lib/ -name 'Test*' -type d -print0 | xargs -0 rm -v -r
+mv data/doc/ruby/Borges/{RDoc,rdoc}
 
+%build
 ruby setup.rb config \
 	--rb-dir=%{ruby_rubylibdir} \
 	--so-dir=%{ruby_archdir}
 
 ruby setup.rb setup
-
-mv data/doc/ruby/Borges/RDoc data/doc/ruby/Borges/rdoc
 
 rdoc --ri --op ri lib
 
@@ -80,7 +76,6 @@ rm -rf $RPM_BUILD_ROOT
 %doc data/doc/ruby/Borges/*
 %{ruby_rubylibdir}/Borges.rb
 %{ruby_rubylibdir}/Borges
-%{_examplesdir}/*
 %{ruby_ridir}/Borges
 %{ruby_ridir}/Array/render_on-i.yaml
 %{ruby_ridir}/HtmlRendererProfiler
@@ -96,3 +91,4 @@ rm -rf $RPM_BUILD_ROOT
 %{ruby_ridir}/String/print_html_on-i.yaml
 %{ruby_ridir}/String/render_on_indent-i.yaml
 %{ruby_ridir}/Weak
+%{_examplesdir}/*
