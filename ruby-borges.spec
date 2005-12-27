@@ -9,7 +9,6 @@ Source0:	http://rubyforge.org/frs/download.php/574/borges-%{version}.tar.gz
 # Source0-md5:	16b448d727a2647cf1dadfed22b5a02f
 URL:		http://borges.rubyforge.org/
 BuildRequires:	rpmbuild(macros) >= 1.263
-BuildRequires:	ruby-modules
 BuildRequires:	ruby-devel
 Requires:	ruby-modules
 #BuildArch:	noarch
