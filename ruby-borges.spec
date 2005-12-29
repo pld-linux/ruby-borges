@@ -8,9 +8,9 @@ Group:		Development/Languages
 Source0:	http://rubyforge.org/frs/download.php/574/borges-%{version}.tar.gz
 # Source0-md5:	16b448d727a2647cf1dadfed22b5a02f
 URL:		http://borges.rubyforge.org/
-BuildRequires:	rpmbuild(macros) >= 1.263
+BuildRequires:	rpmbuild(macros) >= 1.277
 BuildRequires:	ruby-devel
-Requires:	ruby-modules
+%ruby_mod_ver_requires_eq
 #BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
