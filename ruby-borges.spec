@@ -1,5 +1,5 @@
 Summary:	Continuation-based web application framework
-Summary(pl):	Szkielet aplikacji WWW oparty na kontynuacji
+Summary(pl.UTF-8):   Szkielet aplikacji WWW oparty na kontynuacji
 Name:		ruby-Borges
 Version:	1.1.0
 Release:	3
@@ -23,14 +23,14 @@ components from simple methods. Backtracking is supported seamlessly,
 allowing a simple approach to building web applications that does not
 get in the developer's way.
 
-%description -l pl
+%description -l pl.UTF-8
 Borges to szkielet aplikacji WWW oparty na kontynuacji, oryginalnie
-sportowany z Seaside 2, pozwalaj±cy na liniowy styl programowania
-aplikacji WWW. Komponenty stron Borges mog± wywo³ywaæ siê nawzajem i
-powracaæ w naturalny sposób, pozwalaj±c na z³o¿on± interakcjê miêdzy
-komponentami z prostych metod. Wsteczne ¶ledzenie jest obs³ugiwane w
-sposób przezroczysty, co pozwala na proste podej¶cie przy tworzeniu
-aplikacji WWW bez wchodzenia programistom w drogê.
+sportowany z Seaside 2, pozwalajÄ…cy na liniowy styl programowania
+aplikacji WWW. Komponenty stron Borges mogÄ… wywoÅ‚ywaÄ‡ siÄ™ nawzajem i
+powracaÄ‡ w naturalny sposÃ³b, pozwalajÄ…c na zÅ‚oÅ¼onÄ… interakcjÄ™ miÄ™dzy
+komponentami z prostych metod. Wsteczne Å›ledzenie jest obsÅ‚ugiwane w
+sposÃ³b przezroczysty, co pozwala na proste podejÅ›cie przy tworzeniu
+aplikacji WWW bez wchodzenia programistom w drogÄ™.
 
 %prep
 %setup -q -n borges-%{version}
