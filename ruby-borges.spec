@@ -1,5 +1,5 @@
 Summary:	Continuation-based web application framework
-Summary(pl.UTF-8):   Szkielet aplikacji WWW oparty na kontynuacji
+Summary(pl.UTF-8):	Szkielet aplikacji WWW oparty na kontynuacji
 Name:		ruby-Borges
 Version:	1.1.0
 Release:	3
