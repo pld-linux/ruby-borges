@@ -60,7 +60,7 @@ mv -f $RPM_BUILD_ROOT/usr/share/examples/* $RPM_BUILD_ROOT%{_examplesdir}
 
 rm -r $RPM_BUILD_ROOT%{_docdir}/ruby/Borges
 
-cp -a ri/ri/* $RPM_BUILD_ROOT%{ruby_ridir}
+cp -a ri/* $RPM_BUILD_ROOT%{ruby_ridir}
 rm $RPM_BUILD_ROOT%{ruby_ridir}/Array/cdesc-Array.yaml
 rm $RPM_BUILD_ROOT%{ruby_ridir}/Numeric/cdesc-Numeric.yaml
 rm $RPM_BUILD_ROOT%{ruby_ridir}/Object/cdesc-Object.yaml
